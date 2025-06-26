@@ -8,12 +8,28 @@
     PROBLEM 1: Write an object called chef that includes your name, where you are from, and a greet method that returns "Hello I am (add your name), and my specialty is grilling". Console.log the result of the greet method so it prints to the console.
     */
     //ENTER YOUR CODE HERE
-
+    const chef = {
+      name: "LBD",
+      from: "Ecuador",
+      greet: function () {
+        return `Hello I am ${chef.name}, and my specialty is grilling`
+      }
+    }
+    console.log(chef.greet());
     /*
     PROBLEM 2: Write an object called baker that includes her name, her station (the bakery), and a bake method that takes a name and baked good as parameters
 and returns "(add name) just baked a (add baked good)". Console.log the result of the bake method so it prints to the console.
     */
     //ENTER YOUR CODE HERE
+    const baker = {
+      name: "",
+      sation:"bakery",
+      bake: function (name, bakedgoods) {
+        baker.name = name;
+        return `${baker.name} just baked a ${bakedgoods}`
+      }
+    }
+    console.log(baker.bake("Karen", "cupcakes"));
 
     /*
     PROBLEM 3: Write an object called knife that uses the compact syntax and includes:
@@ -23,6 +39,15 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
     Console.log the result of the cut method so it prints to the console.
     */
     //ENTER YOUR CODE HERE
+      const knife =  {
+        sharp: true,
+        size: "big",
+        cut(num, food) {
+          return `cut ${food} in ${num} seconds`
+        }
+      }
+
+      console.log(knife.cut(4,"pizza"))
 
     /*
     PROBLEM 4: Write an object called Chicken Parmesan that uses the compact syntax and includes:
