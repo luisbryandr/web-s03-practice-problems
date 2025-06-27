@@ -56,22 +56,30 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
         • A serve method with a course and a food item as parameters that returns "(food item) has been served for the (course) course"
     Console.log the result of the serve method so it prints to the console.
     */
-    //ENTER YOUR CODE HERE
+    //ENTER YOUR CODE HERE  
 
+      let chickenParmesan = {
+        course: "entree",
+        type: "Italian",
+        serve(course,foodItem) {
+          return `${foodItem} has been served for the ${course} course`
+        }
+      }
+      console.log(chickenParmesan.serve("love","dessert"))
     /*
     PROBLEM 5 (DEBUGGING): When trying to have a hostess seat a table, you are getting this error: "Unexpected token 'function'". Fix this error and console.log the seat method so that the method prints to the console. Note: You can solve this with either method syntax.
     */
-    /*
+   
     let hostess = {
       name: "Cara",
       experience: "7 years",
-      function seat(number){
+      seat: function(number){
         return `Right this way to table ${number}`;
       }
     }
 
     console.log(hostess.seat(5));
-    */
+
 
   </script>
 </body>
