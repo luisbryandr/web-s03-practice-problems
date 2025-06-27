@@ -18,42 +18,98 @@
       */
     //ENTER YOUR CODE HERE
 
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      greet(){
+        console.log(`Hello, my name is ${this.name} and my age is ${this.age} years old`)
+      }
+    }
+
+    const reatna = new Person('Reatna', 31);
+    console.log(reatna.name, reatna.age);
     /*
     PROBLEM 2: Create a constructor function called Rectangle that takes in two parameters, width and height, and creates a new object with those properties. Add methods to the Rectangle prototype called area and perimeter that return the area and perimeter of the rectangle, respectively. Create a new instance of Rectangle and log its area and perimeter to the console.
     */
 
     //ENTER YOUR CODE HERE
+    class Rectangle {
+      constructor(width, height) {
+        this.width = width;
+        this.height = height;
+      }
+      area() {
+        return this.width * this.height
+      }
+      perimeter(){
+       return this.width + this.height
+      }
+    }
+
+    const rea = new Rectangle(10,30); 
+    console.log(rea.perimeter(), rea.area())
+
 
     /*
    PROBLEM 3: Create a constructor function called Team that takes in two parameters, name and sport, and creates a new object with those properties. Add a method to the Team prototype called win that increases the team's number of wins by one. Add another method called loss that increases the team's number of losses by one. Create a new instance of Team and use the win and loss methods to manipulate the team's win and loss records.
    */
 
     //ENTER YOUR CODE HERE
+  class Team {
+    constructor(name, sport) {
+      this.name = name;
+      this.sport = sport;
+      this.wins = 0;
+      this.losess = 0;
+    }
+    win() {
+      this.wins ++
+    }
+    loss() {
+      this.losses ++
+    } 
+  }
 
+  const eagles = new Team('Eagles', 'American Footbal');
+  
     /*
     PROBLEM 4: Write a constructor function called Product that takes in three parameters, name, price, and description, and creates a new object with those properties. Add a method to the Product prototype called discount that takes in a percentage and reduces the price of the product by that percentage. Create a new instance of Product and use the discount method to reduce the price of the product.
     */
 
     //ENTER YOUR CODE HERE
-
+  class Product {
+      constructor(name, price, description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+      }
+      discount(percent) {
+        this.price = this.price * (1 - percent / 100);
+      }
+    }
+    let cup = new Product('Beer Glass', 11.99, 'A tall handmade glass');
     /*
     PROBLEM 5 (DEBUGGING): There is a bug in the code that is causing an error when the start method is called. When myCar.start() is executed, it should output "Starting the Honda Civic...". However, the code is currently throwing an error: 'TypeError: Cannot read property 'start' of undefined'. Fix the code and create a new car object. Console.log the object to see the error message printed to the console and the results once you have fixed the code.
-
+    */
     // Constructor function for creating a car object
-    function Car(make, model, year) {
-      this.make = make;
-      this.model = model;
-      this.year = year;
-      this.start = function() {
+    class Car {
+      constructor(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+       start = function() {
       console.log("Starting the " + this.make + " " + this.model + "...");
       }
     }
 
     // Create a new car object and call the start method
-    let myCar = Car("Honda", "Civic", 2021);
+    let myCar = new Car("Honda", "Civic", 2021);
     myCar.start();
 
-    */
+   
 
     // ENTER YOUR CODE HERE
 
