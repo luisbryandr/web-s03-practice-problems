@@ -10,24 +10,29 @@
     */
     let str = 'abc';
     let arr = ['a', 'b', 'c'];
-    str[0] = 'A'; // operation 1. Did we mutate the string inside str?
-    arr[0] = 'A'; // operation 2. Did we mutate the array inside arr?
+    str[0] = 'A'; // operation 1. Did we mutate the string inside str? NO
+    arr[0] = 'A'; // operation 2. Did we mutate the array inside arr? YES
     // Create your console.logs here:
+    console.log(str);
+    console.log(arr);
 
     /*
     PROBLEM 2: Is the following operation incrementing both values? Log out num and copy to find out.
     */
     let num = 1;
     let copy = num;
-    num++; // is this affecting copy also?
+    num++; // is this affecting copy also? NO
     // Create your console.logs here:
-
+    console.log(num);
+    console.log(copy);
     /*
     PROBLEM 3: Is the following operation changing likesPizza? Log out likesPizza and likesBroccoli to find out.
     */
     let likesPizza = true;
-    let likesBroccoli = !likesPizza; // is this changing the value of likesPizza?
+    let likesBroccoli = !likesPizza; // is this changing the value of likesPizza? NO
     // Create your console.logs here:
+    console.log(likesPizza);
+    console.log(likesBroccoli);
   </script>
 
 </body>
