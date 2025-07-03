@@ -7,14 +7,24 @@
   <script>
     /*
     PROBLEM 1: Change the arrow function on the multiply method to the correct syntax used within an object. Console.log the object before and after the change to see the results printed to the console.
+    
+    */
     const obj = {
         multiplier: 10,
-        multiply: (a, b) => a * b * this.multiplier;
+        multiply: (a, b) => a * b * this.multiplier
       };
-    */
+          console.log(obj);
+
 
     //ENTER YOUR CODE HERE
+    const obj2 = {
+        multiplier: 10,
+        multiply: function (a, b) {
+         return a * b * this.multiplier;
+        } 
+      };
 
+      console.log(obj2);
     /*
     PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
 
@@ -28,8 +38,17 @@
     */
 
     //ENTER YOUR CODE HERE
+      let sum = 0;
+      // const calculateTotal = (number) => sum += number;
 
-
+    const flock = {
+      herd: 200,
+      species: 'seagull',
+      calculateTotal: function (num) {
+        return this.herd += num;
+      }
+    }
+      console.log(flock.calculateTotal(3))
     /*
    PROBLEM 3: Change the arrow function called countdown to work within the game object below while using the 'this' keyword. Console.log the method to see the results printed to the console.
 
@@ -48,8 +67,27 @@
    */
 
     //ENTER YOUR CODE HERE
+  //    const countDown = (num) => {
+  //    if (num >= 0) {
+  //      console.log(`Current countdown number: ${num}`);
+  //      countDown(num - 1);
+  //    }
+  //  };
 
+   const game = {
+     name: 'Hide n Seek',
+     players: 5,
+     location: 'Central Park',
+     countDown: function (num) {
+        if (num >= 0) {
+       console.log(`Current countdown number: ${num}`);
+       this.countDown(num - 1);
+       return "countdown complete!"
+     }
+     }
+   }
 
+   console.log(game.countDown(5));
     /*
     PROBLEM 4: Change the arrow functions called add, subtract, and multiply to work within the tech object below while using the 'this' keyword. Console.log the methods to see the results printed to the console.
 
@@ -66,18 +104,40 @@
     */
 
     //ENTER YOUR CODE HERE
+    const add = (num1, num2) => num1 + num2;
+    const subtract = (num1, num2) => num1 - num2;
+    const multiply = (num1, num2) => num1 * num2;
 
+    const tech = {
+      name: 'calculator',
+      type: 'computer',
+      number1: 4,
+      number2: 5,
+      add: function (num1, num2) {
+        return num1 + num2;
+      },
+      subtract() {
+        return this.number1 - this.number2;
+      },
+      multiply() {
+        return this.number1 * this.number2;
+      }
+    }
+
+    console.log(tech.add(3,5));
+    console.log(tech.subtract());
+    console.log(tech.multiply());
     /*
     PROBLEM 5 (DEBUGGING): This object contains a value property and a double method that multiplies the value by 2. When invoking the double method, you receive the error: 'NaN' (Not a Number). Fix the code below and console.log the double method to see the correct result printed to the console.
     */
-    // const obj = {
-    //   value: 10,
-    //   double: () => {
-    //     return this.value * 2;
-    //   }
-    // };
-    //
-    // console.log(obj.double()); // Output: NaN
+    const obj3 = {
+      value: 31,
+      double: function ()  {
+        return this.value * 2;
+      }
+    };
+    
+    console.log(obj3.double()); // Output: NaN
 
   </script>
 
