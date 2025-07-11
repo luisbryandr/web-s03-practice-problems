@@ -10,30 +10,39 @@
     PROBLEM 1: Create a new array with the .map array method using the numbers array that has double the value of each number and log the results in the console.
     */
     //ENTER YOUR CODE HERE
+    let newArr = numbers.map(item => item * 2);
+
+    console.log(newArr);
 
     /*
     PROBLEM 2: Create a new array with the .map array method using the numbers array with the value of each number divided in half and log the results in the console.
     */
     //ENTER YOUR CODE HERE
+    let halfNumbers = numbers.map(num => num / 2);
 
+    console.log(halfNumbers);
     /*
    PROBLEM 3: Create a new array with the .map array method using the strings array with only the first character in each string and log the results in the console.
    */
     const strings = ['apple', 'chocolate', 'cherry', 'pecan']
     //ENTER YOUR CODE HERE
+    let firstCharacters = strings.map(str => str.slice(0,1));
 
+    console.log(firstCharacters);
     /*
     PROBLEM 4: Create a new array with the .map array method using the strings array with only the last character in each string and log the results in the console.
     */
     //ENTER YOUR CODE HERE
+    let lastCharacters = strings.map(str => str.slice(str.length - 1, str.length));
 
+    console.log(lastCharacters);
     /*
     PROBLEM 5 (DEBUGGING): The following commented code is supposed to return a new array that adds the word 'pie' to the end of each string in the strings array but something is wrong.  Uncomment and fix the bug. Check the results in the console.
     */
-    // const pieArray = strings.map((string) => {
-    // string = string + 'pie'
-    // })
-    // console.log(pieArray)
+    const pieArray = strings.map((string) => 
+    string = string + 'pie'
+    )
+    console.log(pieArray)
   </script>
 
 </body>
