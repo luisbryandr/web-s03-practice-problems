@@ -15,7 +15,9 @@
       city: 'New York'
     };
     //ENTER YOUR CODE HERE
+    let { name, age, city } = person;
 
+    console.log(name, age, city)
     /*
     PROBLEM 2: Given the object student below, extract properties from the object and assign them to variables.
     Use destructuring assignment to extract the id, firstName, and lastName properties into their own variables.
@@ -26,6 +28,7 @@
       lastName: 'Doe'
     };
     //ENTER YOUR CODE HERE
+    let { id, firstName, lastName } = student;
 
     /*
    PROBLEM 3: Given the object car below, extract properties from the object and assign them to variables.
@@ -36,7 +39,7 @@
       model: 'Corolla'
     };
     //ENTER YOUR CODE HERE
-
+    let { brand, model } = car;
     /*
     PROBLEM 4: Given the object movie below, extract properties from the object and assign them to variables.
     Use destructuring assignment to extract the following properties into their own variables:
@@ -61,7 +64,13 @@
       },
     };
     //ENTER YOUR CODE HERE
+    const { tite: movieTitle } = movie;
+    const { director: movieDirector } = movie;
+    const { releaseYear: movieReleaseYear } = movie;
+    const { first_actor: {name: leadActor}} = movie;
+    const { first_actor: leadCharacter } = movie;
 
+    console.log( leadCharacter);
     /*
     PROBLEM 5 (DEBUGGING): The code below should extract the city, state, and title properties from the object
     and assign them to variables. However, there is a bug in the code.  Fix the bug so that the code works as intended.
@@ -80,11 +89,14 @@
         company: 'Tech Corp'
       }
     };
-    /*
-    const company = data.job;
-    const state = data.location.state;
-    const title = data.title;
-    */
+    
+    
+    const {company } = data.job;
+    const  { state } = data.user.location;
+    const { title } = data.job;
+
+    console.log( company, state, title);
+    
   </script>
 
 </body>
