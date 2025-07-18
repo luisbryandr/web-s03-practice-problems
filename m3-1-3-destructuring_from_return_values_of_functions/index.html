@@ -11,13 +11,26 @@
     called personName and personAge.
     */
     //ENTER YOUR CODE HERE
+    function getPerson() {
+      return { name: "Bryan", age: 32 };
+    }
 
+    const { name, age } = getPerson();
+    console.log(name, age)
     /*
-    PROBLEM 2: Decalre a function called getFullName that returns an object with firstName
+    PROBLEM 2: Declare a function called getFullName that returns an object with firstName
     and lastName properties. Use destructuring assignment to extract the properties of the
     returned object into variables called firstName and lastName.
     */
     //ENTER YOUR CODE HERE
+    function getFullName() {
+      return {
+        firstName: "Luis",
+        lastName: "Dominguez",
+      }
+    }
+
+    const { firstName, lastName } = getFullName();
 
      /*
     PROBLEM 3: Declare a function called getRectangleDimensions that returns an object with
@@ -25,6 +38,13 @@
     returned object into variables called width and height.
     */
     //ENTER YOUR CODE HERE
+    function getRectangleDimensions() {
+      return {
+        width: 2,
+        height: 3
+      }
+    }
+     let { width, height } = getRectangleDimensions();
 
     /*
     /*
@@ -33,22 +53,28 @@
     returned object into variables called radius.
     */
     //ENTER YOUR CODE HERE
+    function getCircleRadius() {
+      return {
+        radius: 3,
+      }
+    }
 
+    let { radius } = getCircleRadius();
     /*
     PROBLEM 5 (DEBUGGING): The following function is supposed to return the ingredients
     of a recipe.  However, it is not working properly.  Please debug the function so that
     it returns the correct ingredients.
     */
 
-   /*
+   
     function getRecipeIngredients(recipe) {
       return {
       name: "Chocolate Chip Cookies",
       ingredients: ["flour", "sugar", "chocolate chips", "butter", "eggs"]
       };
     }
-    let {name, ingredients} = getRecipeIngredients(name, ingredients);
-  */
+    let { ingredients } = getRecipeIngredients();
+  
   </script>
 
 </body>
