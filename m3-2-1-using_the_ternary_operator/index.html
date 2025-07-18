@@ -11,7 +11,11 @@
     Use the ternary operator to create the conditional.
     */
     //ENTER YOUR CODE HERE
+    function greeting(name) {
+      return name ? 'Hello, ' + name : "Hello, stranger!";
+    }
 
+    console.log(greeting('Luis'))
     /*
     PROBLEM 2: Declare a function called canDrink that takes an age as an argument and
     returns either "You can drink!" if age is greater than or equal to 21,
@@ -19,34 +23,46 @@
     */
     //ENTER YOUR CODE HERE
 
+    function canDrink(age) {
+      return age >= 21 ? "You can drink!" : "You cannot drink";
+    }
+
+    console.log(canDrink(20));
     /*
    PROBLEM 3: Declare a function called isEven that takes a number as an argument and
    returns either "Even." if the number is even, or "Odd."if the number is odd. Use the ternary operator
    to create the conditional.
    */
     //ENTER YOUR CODE HERE
-
+    function isEven(num) {
+      return num % 2 === 0 ? "Even." : "Odd.";
+    }
+    
+    console.log(isEven(3));
     /*
     PROBLEM 4: Declare a function called getDiscount that takes a boolean isMember
     and a number total as arguments and returns either total - 10 if isMember is truthy,
     or total if isMember is falsy. Use the ternary operator to create the conditional.
     */
     //ENTER YOUR CODE HERE
-
+    function getDiscount(isMember, total) {
+      return isMember ? total - 10 : total;
+    }
     /*
     PROBLEM 5 (DEBUGGING): The following function isPalindrome is supposed to return true if the string is a palindrome,
     and false if it is not.  However, it is not working correctly.  Please debug the function so that it works as intended.
     */
 
-    /*
+    
     function isPalindrome(str) {
       let reversedStr = "";
       for (let i = str.length - 1; i >= 0; i--) {
         reversedStr += str[i];
       }
-      return reversedStr = str;
+      return reversedStr === str ? true : false;
     }
-    */
+  
+    console.log(isPalindrome('yanay'));
 
   </script>
 
