@@ -10,13 +10,17 @@
     */
 
     //ENTER YOUR CODE HERE
-
+    // window.onclick = () => console.log(`The answer to life is 13`)
     /*
     PROBLEM 2: Write a function called clickCounter that increments a counter variable and logs the current count to the console each time the user clicks.
     */
 
     //ENTER YOUR CODE HERE
-
+    // let count = 0;
+    //   window.onclick = () => {
+    //     count++;
+    //     console.log(`Button clicked ${count} times.`);
+    // }
      /*
     PROBLEM 3: Rewrite this function into a browser event using window.onclick.
 
@@ -34,7 +38,17 @@
     */
 
     //ENTER YOUR CODE HERE
+      window.onclick = () => {
+      const currentColor = 'red';
 
+      if (currentColor === 'red') {
+        console.log('Background is red');
+        currentColor = 'green';
+      } else {
+        console.log('Background is green');
+        currentColor = 'red';
+      }
+    }
     /*
     PROBLEM 4: Create a function that prints a random color to the console every time the user clicks anywhere on the page. Here is the formula for a random color:
 
