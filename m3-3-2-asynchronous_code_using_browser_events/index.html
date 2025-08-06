@@ -57,6 +57,11 @@
 
     //ENTER YOUR CODE HERE
 
+    window.onclick = () => {
+      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      console.log(randomColor)
+    }
+
 
     /*
     PROBLEM 5 (DEBUGGING): When the window loads, a counter variable is initialized to 0. Whenever the user clicks anywhere on the window, the counter variable is incremented and the current count is logged to the console. However, the counter variable is not incrementing correctly. When the user clicks on the window, the console logs "Click count: NaN". Fix the code to ensure that the counter variable increments correctly each time the user clicks on the window and that the current count is logged to the console.
@@ -64,14 +69,14 @@
     window.onload is basically the same as onclick except for when the page loads: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
     */
 
-    /*
+
     window.onload = () => {
-      let counter;
+      let counter = 0;
       window.onclick = () => {
         console.log(`Click count: ${++counter}`);
       };
     };
-    */
+   
 
   </script>
 
